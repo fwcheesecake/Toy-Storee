@@ -1,56 +1,82 @@
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import res.fonts.Fonts;
 
-public class FancyPasswordField extends FancyTextField implements KeyListener {
+import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import java.awt.*;
+
+public class FancyPasswordField extends JPasswordField {
     //Public Members
     public FancyPasswordField() {
-        this.addKeyListener(this);
+        super();
 
-        this.setPassword("");
-        this.setTop(0);
+        this.setHint("Password");
+
+        this.setTextColor(Colors.DARK_BLUE);
+        this.setHintColor(Colors.BLACK);
+
+        this.setForeground(this.getHintColor());
+        this.setBackground(Colors.GREEN);
+
+        Border rounded = new LineBorder(Colors.GREEN, 1, true);
+        Border empty = new EmptyBorder(0, 5, 0, 5);
+        Border border = new CompoundBorder(rounded, empty);
+
+        this.setBorder(border);
+    }
+    public FancyPasswordField(String hint) {
+        super();
+
+        this.setHint(hint);
+        this.setTextColor(Colors.DARK_BLUE);
+        this.setHintColor(Colors.DARK_BLUE);
+        this.setForeground(this.getHintColor());
+        this.setBackground(Colors.GREEN);
     }
 
+    public String getHint() {
+        return hint;
+    }
+    public void setHint(String hint) {
+        this.hint = hint;
+    }
+
+    public Color getHintColor() {
+        return hintColor;
+    }
+    public void setHintColor(Color hintColor) {
+        this.hintColor = hintColor;
+    }
+
+    public Color getTextColor() {
+        return textColor;
+    }
+    public void setTextColor(Color textColor) {
+        this.textColor = textColor;
+    }
+
+    //Protected Members
     @Override
-    public void keyTyped(KeyEvent e) {
-        if(e.getKeyChar() == '\b') {
-            setTop(getTop() - 1);
-        } else {
-            this.setPassword(this.getPassword() + e.getKeyChar());
-            this.setText(this.getText() + "*");
-            setTop(getTop() + 1);
-        }
-        System.out.println(this.getPassword());
-    }
-    @Override
-    write
+    protected void paintComponent(final Graphics pG) {
+        super.paintComponent(pG);
 
-    @Override
-    public void keyPressed(KeyEvent e) {
+        final Graphics2D g = (Graphics2D) pG;
+        g.drawLine(this.getInsets().left, pG.getFontMetrics().getMaxAscent() + 10,
+                this.getWidth() - this.getInsets().right,
+                pG.getFontMetrics().getMaxAscent() + 10);
 
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-
-    }
-
-    public String getPassword() {
-        if(getTop() != password.length())
-            return password.substring(0, getTop());
-        return password;
-    }
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getTop() {
-        return top;
-    }
-    public void setTop(int top) {
-        this.top = top;
+        if(this.getHint().length() == 0 || this.getPassword().length > 0)
+            return;
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        g.setColor(this.getHintColor());
+        g.drawString(hint, this.getInsets().left, pG.getFontMetrics().getMaxAscent() + 5);
     }
 
     //Private Members
-    private String password;
-    private int top;
+    private String hint;
+    private Color hintColor;
+    private Color textColor;
+
 }

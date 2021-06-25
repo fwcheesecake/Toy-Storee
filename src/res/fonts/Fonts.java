@@ -11,11 +11,13 @@ public class Fonts {
         if(fonts.isEmpty()) {
             try {
                 String[] fontNames = {"Black", "BlackItalic", "Bold", "BoldItalic", "ExtraBold",
-                    "ExtraBoldItalic", "ExtraLight", "ExtraLightItalic", "Italic", "Light",
-                    "LightItalic", "Medium", "MediumItalic", "Regular", "SemiBold", "SemiBoldItalic",
-                    "Thin", "ThinItalic"};
+                        "ExtraBoldItalic", "ExtraLight", "ExtraLightItalic", "Italic", "Light",
+                        "LightItalic", "Medium", "MediumItalic", "Regular", "SemiBold",
+                        "SemiBoldItalic", "Thin", "ThinItalic"};
+
                 for(String s : fontNames) {
-                    InputStream fontStream = Fonts.class.getResourceAsStream("Montserrat-" + s + ".ttf");
+                    InputStream fontStream =
+                            Fonts.class.getResourceAsStream("Montserrat-" + s + ".ttf");
                     assert fontStream != null;
                     Font f = Font.createFont(Font.TRUETYPE_FONT, fontStream);
                     fonts.put(s, f);
