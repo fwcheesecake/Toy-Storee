@@ -5,12 +5,10 @@ public class Main {
         //LogIn login = new LogIn();
         //UserSession userSession = new UserSession();
 
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                Windows.getLogin();
-                Windows.getUserSession();
-            }
+        SwingUtilities.invokeLater(() -> {
+            //Windows.getLogin();
+            //Windows.getUserSession();
+            Windows.getDashboard();
         });
     }
 }
