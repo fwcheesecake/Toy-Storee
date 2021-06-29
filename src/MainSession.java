@@ -1,11 +1,18 @@
 import javax.swing.*;
 
 public class MainSession extends JFrame {
+    //Public Members
     public MainSession() {
         super("Main Session");
         this.setContentPane(contentPanel);
+
+        this.setSize(1280, 720);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.setVisible(true);
     }
 
+    //Private Members
     private JLabel navLogo;
     private JButton ordersButton;
     private JButton exitButton;
