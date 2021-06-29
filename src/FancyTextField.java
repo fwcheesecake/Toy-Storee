@@ -33,10 +33,19 @@ public class FancyTextField extends JTextField {
         super();
 
         this.setHint(hint);
+
         this.setTextColor(Colors.DARK_BLUE);
-        this.setHintColor(Colors.DARK_BLUE);
+        this.setHintColor(Colors.BLACK);
+
         this.setForeground(this.getHintColor());
         this.setBackground(Colors.GREEN);
+
+        Border rounded = new LineBorder(Colors.GREEN, 1, true);
+        Border empty = new EmptyBorder(0, this.getInsets().left + 5, 0,
+                this.getInsets().right + 5);
+        Border border = new CompoundBorder(rounded, empty);
+
+        this.setBorder(border);
     }
 
     public String getHint() {
@@ -75,7 +84,9 @@ public class FancyTextField extends JTextField {
 
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g.setColor(this.getHintColor());
-        g.drawString(hint, this.getInsets().left, pG.getFontMetrics().getMaxAscent() + 5);
+        g.drawString(hint, this.getInsets().left,
+                this.getInsets().top + pG.getFontMetrics().getMaxAscent());
+        //g.drawString(hint, this.getInsets().left, pG.getFontMetrics().getMaxAscent() + 5);
     }
 
     //Private Members
