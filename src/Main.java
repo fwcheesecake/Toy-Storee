@@ -8,10 +8,8 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                MainSession mainSession = new MainSession();
-                mainSession.setSize(1280, 720);
-                mainSession.setVisible(true);
-                mainSession.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Windows.getLogin();
+                Windows.getUserSession();
             }
         });
     }
