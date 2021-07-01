@@ -6,8 +6,8 @@ public class Main {
         //UserSession userSession = new UserSession();
 
         SwingUtilities.invokeLater(() -> {
-            //Windows.getLogin();
-            //Windows.getUserSession();
+            Windows.getLogin();
+            Windows.getUserSession();
             Windows.getDashboard();
         });
     }
