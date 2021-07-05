@@ -33,6 +33,7 @@
               <forms/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <text value="Clients / New"/>
             </properties>
           </component>
@@ -82,17 +83,21 @@
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-1"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="3d174" class="javax.swing.JTextField" binding="firstnameField">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
+              <inheritsPopupMenu value="true"/>
               <preferredSize width="200" height="30"/>
             </properties>
           </component>
@@ -102,6 +107,7 @@
               <forms defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <text value="Address"/>
             </properties>
           </component>
@@ -113,6 +119,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="200" height="30"/>
             </properties>
           </component>
@@ -122,6 +129,7 @@
               <forms defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <text value="Phone 1"/>
             </properties>
           </component>
@@ -133,6 +141,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -142,6 +151,7 @@
               <forms defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <text value="Number"/>
             </properties>
           </component>
@@ -153,6 +163,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -162,6 +173,7 @@
               <forms/>
             </constraints>
             <properties>
+              <foreground color="-16777216"/>
               <text value="Door"/>
             </properties>
           </component>
@@ -173,6 +185,7 @@
               <forms defaultalign-horz="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -182,6 +195,7 @@
               <forms defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <text value="Phone 2"/>
             </properties>
           </component>
@@ -193,6 +207,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -204,6 +219,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="200" height="30"/>
             </properties>
           </component>
@@ -215,6 +231,7 @@
               <forms defaultalign-horz="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -224,6 +241,7 @@
               <forms/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <text value="Email"/>
             </properties>
           </component>
@@ -235,6 +253,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -246,6 +265,7 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
@@ -257,17 +277,20 @@
               <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
             <properties>
+              <foreground color="-14277082"/>
               <preferredSize width="70" height="30"/>
             </properties>
           </component>
           <component id="887a0" class="javax.swing.JTextField" binding="lastnameField">
             <constraints>
-              <grid row="0" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="0" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
-              <forms defaultalign-horz="false"/>
+              <forms defaultalign-horz="false" defaultalign-vert="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <foreground color="-14277082"/>
+            </properties>
           </component>
         </children>
       </grid>

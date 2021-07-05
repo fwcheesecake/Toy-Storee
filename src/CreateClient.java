@@ -5,6 +5,12 @@ public class CreateClient extends JFrame {
         super("Create Client");
         this.setContentPane(contentPanel);
 
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+
         this.setSize(500, 400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

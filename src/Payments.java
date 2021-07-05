@@ -1,4 +1,9 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class Payments extends JFrame {
     public Payments() {
@@ -8,7 +13,35 @@ public class Payments extends JFrame {
         this.setSize(1280, 720);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
+
         this.setVisible(true);
+        dashboardButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                Windows.getPayments().setVisible(false);
+                Windows.getDashboard().setVisible(true);
+            }
+        });
+        comboBox1.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent itemEvent) {
+                if(itemEvent.getStateChange() == itemEvent.SELECTED) {
+                    String selected = itemEvent.getItem().toString();
+                    switch (selected) {
+                        case "Orders" -> Windows.getOrders().setVisible(true);
+                        case "Sessions" -> Windows.getSessions().setVisible(true);
+                        case "Clients" -> Windows.getClients().setVisible(true);
+                        default -> System.out.println("Something happened");
+                    }
+                    Windows.getPayments().dispose();
+                }
+            }
+        });
     }
 
     private JPanel navbarPanel;
